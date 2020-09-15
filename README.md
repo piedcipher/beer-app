@@ -1,6 +1,17 @@
-<h1 align="center">Beer App</h1>
+<h1 align="center">:beers: Beer App :beers:</h1>
+
+<p align="center"><img src="https://raw.githubusercontent.com/piedcipher/beer-app/master/assets/app_icon.png"></p>
 
 <p align="center">:beer: Beer App is an example for my upcoming article on the topic, <b>Paginationating API response with BLoC in Flutter</b>.</p>
+
+## Screenshots
+<table>
+    <tr>
+        <td><img src="https://raw.githubusercontent.com/piedcipher/beer-app/master/screenshots/1.png"></td>
+        <td><img src="https://raw.githubusercontent.com/piedcipher/beer-app/master/screenshots/2.png"></td>
+        <td><img src="https://raw.githubusercontent.com/piedcipher/beer-app/master/screenshots/3.png"></td>
+    </tr>
+</table>
 
 ## Dependencies
 
