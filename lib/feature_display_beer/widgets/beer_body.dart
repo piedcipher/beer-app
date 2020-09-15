@@ -24,6 +24,7 @@ class BeerBody extends StatelessWidget {
           } else if (beerState is BeerErrorState) {
             Scaffold.of(context)
                 .showSnackBar(SnackBar(content: Text(beerState.error)));
+            context.bloc<BeerBloc>().isFetching = false;
           }
           return;
         },
