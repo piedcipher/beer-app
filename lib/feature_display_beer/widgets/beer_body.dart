@@ -21,6 +21,9 @@ class BeerBody extends StatelessWidget {
           } else if (beerState is BeerSuccessState && beerState.beers.isEmpty) {
             Scaffold.of(context)
                 .showSnackBar(SnackBar(content: Text('No more beers')));
+          } else if (beerState is BeerErrorState) {
+            Scaffold.of(context)
+                .showSnackBar(SnackBar(content: Text(beerState.error)));
           }
           return;
         },
@@ -32,6 +35,23 @@ class BeerBody extends StatelessWidget {
             _beers.addAll(beerState.beers);
             context.bloc<BeerBloc>().isFetching = false;
             Scaffold.of(context).hideCurrentSnackBar();
+          } else if (beerState is BeerErrorState && _beers.isEmpty) {
+            return Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                IconButton(
+                  onPressed: () {
+                    context.bloc<BeerBloc>()
+                      ..isFetching = true
+                      ..add(BeerFetchEvent());
+                  },
+                  icon: Icon(Icons.refresh),
+                ),
+                const SizedBox(height: 15),
+                Text(beerState.error, textAlign: TextAlign.center),
+              ],
+            );
           }
           return ListView.separated(
             controller: _scrollController
