@@ -1,10 +1,19 @@
-# beer_app
+<h1 align="center">Beer App</h1>
 
-A new Flutter application.
+<p align="center">:beer: Beer App is an example for my upcoming article on the topic, <b>Paginationating API response with BLoC in Flutter</b>.</p>
+
+## Dependencies
+
+- [flutter_bloc](https://pub.dev/packages/flutter_bloc)
+- [http](https://pub.dev/packages/http)
+- [json_annotation](https://pub.dev/packages/json_annotation)
+
+## Dev Dependencies
+
+- [build_runner](https://pub.dev/packages/build_runner)
+- [json_serializable](https://pub.dev/packages/json_serializable)
 
 ## Getting Started
-
-This project is a starting point for a Flutter application.
 
 A few resources to get you started if this is your first Flutter project:
 
