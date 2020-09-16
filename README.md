@@ -2,7 +2,7 @@
 
 <p align="center"><img src="https://raw.githubusercontent.com/piedcipher/beer-app/master/assets/app_icon.png"></p>
 
-<p align="center">:beer: Beer App is an example for my upcoming article on the topic, <b>Paginate API response with BLoC in Flutter</b>.</p>
+<p align="center"><b>Paginate API response with BLoC in Flutter</b>.</p>
 
 ## Screenshots
 <table>
