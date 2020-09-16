@@ -26,6 +26,15 @@
 - [build_runner](https://pub.dev/packages/build_runner)
 - [json_serializable](https://pub.dev/packages/json_serializable)
 
+## Credits
+
+- [Punk API](https://punkapi.com/documentation/v2)
+- [Android Asset Studio](https://romannurik.github.io/AndroidAssetStudio/)
+
+## Contributing
+
+Feel free to contribute to the project by creating [issues](https://github.com/piedcipher/beer-app/) or sending [pull-requests](https://github.com/piedcipher/beer-app/pulls).
+
 ## Getting Started
 
 A few resources to get you started if this is your first Flutter project:
