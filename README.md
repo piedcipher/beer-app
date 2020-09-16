@@ -2,7 +2,9 @@
 
 <p align="center"><img src="https://raw.githubusercontent.com/piedcipher/beer-app/master/assets/app_icon.png"></p>
 
-<p align="center"><b>Paginate API response with BLoC in Flutter</b>.</p>
+<p align="center"><b>Example App - Paginate API response with BLoC in Flutter</b>.</p>
+
+<p align="center"><a href="https://link.medium.com/jbKstf8nP9"><img src="https://img.shields.io/badge/Medium-Article-green"></a></p>
 
 ## Screenshots
 <table>
