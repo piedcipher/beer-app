@@ -4,7 +4,7 @@
 
 <p align="center"><b>Example App - Paginate API response with BLoC in Flutter</b>.</p>
 
-<p align="center"><a href="https://link.medium.com/jbKstf8nP9"><img src="https://img.shields.io/badge/Medium-Article-green"></a></p>
+<p align="center"><a target="_blank" href="https://link.medium.com/jbKstf8nP9"><img src="https://img.shields.io/badge/Medium-Article-green"></a></p>
 
 ## Screenshots
 <table>
