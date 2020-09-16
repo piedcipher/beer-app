@@ -33,7 +33,7 @@
 
 ## Contributing
 
-Feel free to contribute to the project by creating [issues](https://github.com/piedcipher/beer-app/) or sending [pull-requests](https://github.com/piedcipher/beer-app/pulls).
+Feel free to contribute to the project by creating [issues](https://github.com/piedcipher/beer-app/issues) or sending [pull-requests](https://github.com/piedcipher/beer-app/pulls).
 
 ## Getting Started
 
