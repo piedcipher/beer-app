@@ -3,7 +3,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'beer_model.g.dart';
 
-@JsonSerializable()
+@JsonSerializable(createToJson: false)
 class BeerModel {
   int id;
 

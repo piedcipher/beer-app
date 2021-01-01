@@ -15,11 +15,3 @@ BeerModel _$BeerModelFromJson(Map<String, dynamic> json) {
     imageUrl: json['image_url'] as String,
   );
 }
-
-Map<String, dynamic> _$BeerModelToJson(BeerModel instance) => <String, dynamic>{
-      'id': instance.id,
-      'name': instance.name,
-      'tagline': instance.tagline,
-      'description': instance.description,
-      'image_url': instance.imageUrl,
-    };
