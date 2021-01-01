@@ -6,7 +6,12 @@ import 'package:beer_app/feature_display_beer/widgets/beer_list_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class BeerBody extends StatelessWidget {
+class BeerBody extends StatefulWidget {
+  @override
+  _BeerBodyState createState() => _BeerBodyState();
+}
+
+class _BeerBodyState extends State<BeerBody> {
   final List<BeerModel> _beers = [];
   final ScrollController _scrollController = ScrollController();
 
@@ -24,7 +29,7 @@ class BeerBody extends StatelessWidget {
           } else if (beerState is BeerErrorState) {
             Scaffold.of(context)
                 .showSnackBar(SnackBar(content: Text(beerState.error)));
-            context.bloc<BeerBloc>().isFetching = false;
+            BlocProvider.of<BeerBloc>(context).isFetching = false;
           }
           return;
         },
@@ -34,7 +39,7 @@ class BeerBody extends StatelessWidget {
             return CircularProgressIndicator();
           } else if (beerState is BeerSuccessState) {
             _beers.addAll(beerState.beers);
-            context.bloc<BeerBloc>().isFetching = false;
+            BlocProvider.of<BeerBloc>(context).isFetching = false;
             Scaffold.of(context).hideCurrentSnackBar();
           } else if (beerState is BeerErrorState && _beers.isEmpty) {
             return Column(
@@ -43,7 +48,7 @@ class BeerBody extends StatelessWidget {
               children: [
                 IconButton(
                   onPressed: () {
-                    context.bloc<BeerBloc>()
+                    BlocProvider.of<BeerBloc>(context)
                       ..isFetching = true
                       ..add(BeerFetchEvent());
                   },
@@ -59,8 +64,8 @@ class BeerBody extends StatelessWidget {
               ..addListener(() {
                 if (_scrollController.offset ==
                         _scrollController.position.maxScrollExtent &&
-                    !context.bloc<BeerBloc>().isFetching) {
-                  context.bloc<BeerBloc>()
+                    !BlocProvider.of<BeerBloc>(context).isFetching) {
+                  BlocProvider.of<BeerBloc>(context)
                     ..isFetching = true
                     ..add(BeerFetchEvent());
                 }
@@ -72,5 +77,11 @@ class BeerBody extends StatelessWidget {
         },
       ),
     );
+  }
+
+  @override
+  void dispose() {
+    _scrollController.dispose();
+    super.dispose();
   }
 }
