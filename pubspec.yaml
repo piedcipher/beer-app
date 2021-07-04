@@ -9,21 +9,21 @@ repository: https://github.com/piedcipher/beer-app
 issue_tracker: https://github.com/piedcipher/beer-app/issues
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^0.1.3
-  flutter_bloc: ^6.1.1
-  http: ^0.12.2
-  json_annotation: ^3.1.1
+  flutter_bloc: ^7.0.1
+  http: ^0.13.3
+  json_annotation: ^4.0.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  build_runner: ^1.10.11
-  json_serializable: ^3.5.1
+  build_runner: ^2.0.5
+  json_serializable: ^4.1.3
 
 flutter:
   uses-material-design: true

@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'beer_model.g.dart';
@@ -14,14 +13,14 @@ class BeerModel {
   String description;
 
   @JsonKey(name: 'image_url')
-  String imageUrl;
+  String? imageUrl;
 
   BeerModel({
-    @required this.id,
-    @required this.name,
-    @required this.tagline,
-    @required this.description,
-    @required this.imageUrl,
+    required this.id,
+    required this.name,
+    required this.tagline,
+    required this.description,
+    this.imageUrl,
   });
 
   factory BeerModel.fromJson(Map<String, dynamic> json) =>

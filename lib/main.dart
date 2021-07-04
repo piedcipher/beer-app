@@ -23,15 +23,15 @@ class BeerApp extends StatelessWidget {
 
 class BeerBlocObserver extends BlocObserver {
   @override
-  void onEvent(Bloc bloc, Object event) {
+  void onEvent(Bloc bloc, Object? event) {
     print(event);
     super.onEvent(bloc, event);
   }
 
   @override
-  void onChange(Cubit cubit, Change change) {
+  void onChange(BlocBase bloc, Change change) {
     print(change);
-    super.onChange(cubit, change);
+    super.onChange(bloc, change);
   }
 
   @override
@@ -41,8 +41,8 @@ class BeerBlocObserver extends BlocObserver {
   }
 
   @override
-  void onError(Cubit cubit, Object error, StackTrace stackTrace) {
+  void onError(BlocBase bloc, Object error, StackTrace stackTrace) {
     print('$error, $stackTrace');
-    super.onError(cubit, error, stackTrace);
+    super.onError(bloc, error, stackTrace);
   }
 }

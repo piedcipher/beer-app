@@ -21,13 +21,13 @@ class _BeerBodyState extends State<BeerBody> {
       child: BlocConsumer<BeerBloc, BeerState>(
         listener: (context, beerState) {
           if (beerState is BeerLoadingState) {
-            Scaffold.of(context)
+            ScaffoldMessenger.of(context)
                 .showSnackBar(SnackBar(content: Text(beerState.message)));
           } else if (beerState is BeerSuccessState && beerState.beers.isEmpty) {
-            Scaffold.of(context)
+            ScaffoldMessenger.of(context)
                 .showSnackBar(SnackBar(content: Text('No more beers')));
           } else if (beerState is BeerErrorState) {
-            Scaffold.of(context)
+            ScaffoldMessenger.of(context)
                 .showSnackBar(SnackBar(content: Text(beerState.error)));
             BlocProvider.of<BeerBloc>(context).isFetching = false;
           }
@@ -40,7 +40,7 @@ class _BeerBodyState extends State<BeerBody> {
           } else if (beerState is BeerSuccessState) {
             _beers.addAll(beerState.beers);
             BlocProvider.of<BeerBloc>(context).isFetching = false;
-            Scaffold.of(context).hideCurrentSnackBar();
+            ScaffoldMessenger.of(context).hideCurrentSnackBar();
           } else if (beerState is BeerErrorState && _beers.isEmpty) {
             return Column(
               mainAxisAlignment: MainAxisAlignment.center,

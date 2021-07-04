@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 
 class BeerRepository {
@@ -12,11 +11,13 @@ class BeerRepository {
   }
 
   Future<dynamic> getBeers({
-    @required int page,
+    required int page,
   }) async {
     try {
       return await http.get(
-        'https://api.punkapi.com/v2/beers?page=$page&per_page=$_perPage',
+        Uri.parse(
+          'https://api.punkapi.com/v2/beers?page=$page&per_page=$_perPage',
+        ),
       );
     } catch (e) {
       return e.toString();
